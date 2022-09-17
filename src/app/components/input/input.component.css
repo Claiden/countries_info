@@ -1,0 +1,18 @@
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    color: black;
+}
+  
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+  
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
