@@ -9,7 +9,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: '/pais:id',
+    path: 'pais:id',
     component: PaisComponent,
   },
 ];

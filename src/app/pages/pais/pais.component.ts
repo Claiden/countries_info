@@ -23,7 +23,7 @@ export class PaisComponent implements OnInit {
 
     this.activatedRoute.params
       .pipe(
-        switchMap( ({ id }) => this.paisService.getPaisPorAlpha( id )  ),
+        switchMap( ({ id }) => this.paisService.getPaisPeloId( id )  ),
         tap( console.log )
       )
       .subscribe( pais => this.pais = pais );

@@ -7,13 +7,13 @@ import { Pais } from 'src/app/models/model-api';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  public pais:any,
-  
   constructor() {
   }
 
-  ngOnInit(): void {
-    this.pais = Pais;
-  }
+  @Input()
+  pais!: Pais;
 
+  ngOnInit(): void {
+    
+  }
 }

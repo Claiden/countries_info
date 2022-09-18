@@ -1,53 +1,33 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
 import { Pais } from '../models/model-api';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class ApiService {
-  private api = 'https://restcountries.eu/rest/v2';
+export class ApiService{
 
-  constructor(private http: HttpClient) {}
+  private api= 'https://restcountries.com/v2';
 
-  getAllCountries() {
-    return this.http.get<Pais[]>(`${this.api}/all`);
-  }
-
-  getPaisByName(name: string) {
-    return this.http
-      .get<Pais[]>(`${this.api}/name/${name}`)
-      .pipe(map(([res]) => res));
-  }
-
-  getCountriesByCodes(codes: string[]) {
-    console.log(`${this.api}/alhpa?codes=${codes.join(';')}`);
-    return this.http.get<Pais[]>(
-      `${this.api}/alpha?codes=${codes.join(';')}`
-    );
-  }
-
-  get httpParams () {
-    return new HttpParams().set( 'fields', 'name,capital,alpha2Code,flag,population' );
-  }
-
-  buscarPais( termino: string ): Observable<Pais[]> {
-    const url = `${ this.api }/name/${ termino }`;
-    
-    return this.http.get<Pais[]>( url, { params: this.httpParams } );
-  }
-
-  buscarCapital( termino: string ):Observable<Pais[]>{
-    const url = `${ this.api }/capital/${ termino }`;
-    return this.http.get<Pais[]>( url, { params: this.httpParams } );
-  }
-
+  constructor(private http: HttpClient){}
   
+  getPaises(){
+    return this.http.get<Pais[]>(`${this.api}/all`)
+  }
 
-  getPaisPorAlpha( id: string ):Observable<Pais>{
+  getPaisPeloId( id: string ):Observable<Pais>{
     const url = `${ this.api }/alpha/${ id }`;
     return this.http.get<Pais>( url );
+  }
+  
+  getPaisPeloNome(pais: string){
+    return this.http.get<Pais[]>(`${this.api}/name/${pais}`).pipe(map(([res]) => res))
+  }
+
+  getPaisPorRegiao(regiao: string){
+    return this.http.get<Pais[]>(`${this.api}/region/${regiao}`).pipe(map(([res]) => res))
   }
 }
