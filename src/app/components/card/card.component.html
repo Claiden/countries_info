@@ -1,9 +1,9 @@
-<div class="container">
-    <div class="img-container">
-        <img/>
-    </div>
-    <div class="names-container">
-        <p class="name">Lena</p>
-        <p class="name">Hello</p>
-    </div>
+<div *ngIf="pais" [routerLink]="'/' + pais.name" class="container">
+  <div class="img-container">
+    <img [src]="pais.flag" />
+  </div>
+  <div class="names-container">
+    <p  class="name" >{{ pais.name }}</p>
+    <p  class="name" ><strong>Region:</strong>{{ pais.region }}</p>
+  </div>
 </div>

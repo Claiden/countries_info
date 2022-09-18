@@ -1,0 +1,12 @@
+<div class="page-container">
+    <app-header></app-header>        
+    <div class="country-cards">
+    <app-card
+        *ngFor="let pais of paises"
+        [pais]="pais"
+    ></app-card>
+    </div>
+      
+
+    <app-footer></app-footer>
+</div>
