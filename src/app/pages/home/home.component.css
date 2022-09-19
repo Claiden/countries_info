@@ -6,24 +6,17 @@
     width:100%;
     overflow: hidden;
     background-color: rgba(212, 212, 207, 0.13);
-
-    margin: 0 -5px;
+   /* margin: 0 -5px;*/
 }
 
 .counties-list{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-
     float: left;
     padding: 0 10px;
 }
 
 .country-cards{
     float: left;
-    width: 25%;
     padding: 0 10px;
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
