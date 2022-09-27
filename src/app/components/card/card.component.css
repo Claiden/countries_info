@@ -1,17 +1,25 @@
 .container{
-    width: 33%;
-    height: 33%;
+    width: 300px;
+    height: 300px;
     display: grid;
     grid-template-rows: 80% 20%;
-    margin: 1% 1% 0 1%;
+    margin: 0 5% 0 5%;
 }
 
 .img-container{
-    background-color: black;
-    overflow: hidden;
+    width: 300px;
+    height: 250px;
+}
+.img{
+    width: 300px;
+    height: 250px;
 }
 
 .name{
     margin: 0 0 0 3%;
     font-style: italic;
+}
+
+.names-container{
+    margin-top: 5%;
 }

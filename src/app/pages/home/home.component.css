@@ -1,38 +1,12 @@
-.componenet{
-    box-sizing: border-box;
-}
-
 .page-container{
     width:100%;
-    overflow: hidden;
-    background-color: rgba(212, 212, 207, 0.13);
-   /* margin: 0 -5px;*/
-}
-
-.counties-list{
-    float: left;
-    padding: 0 10px;
+    margin: 5% 0px;
 }
 
 .country-cards{
-    float: left;
     padding: 0 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-  }
-  
-.page-container:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 600px) {
-    .countries-list {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-    }
+    margin-top:10%;
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
 }

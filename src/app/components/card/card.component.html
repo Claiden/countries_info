@@ -1,6 +1,6 @@
 <div *ngIf="pais" [routerLink]="'/' + pais.name" class="container">
   <div class="img-container">
-    <img [src]="pais.flag" />
+    <img [src]="pais.flag" class="img"/>
   </div>
   <div class="names-container">
     <p  class="name" ><strong>País: </strong>{{ pais.name }}</p>
